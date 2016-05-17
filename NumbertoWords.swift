@@ -3,7 +3,7 @@
 First character of each word will be capital letter for example: 
 104382426112 is One Hundred Four Billion Three Hundred Eighty Two Million Four Hundred Twenty Six Thousand One Hundred Twelve
 */
-
+//Extending Int to convert to its corresponding words
 extension Int {
     var asWord:String{
         let numberValue = NSNumber(integer: self)
@@ -12,11 +12,11 @@ extension Int {
         return "\(formatter.stringFromNumber(self)!)"
     }
 }
-var t = 1//Int(readLine()!)!
+var t = 1//Int(readLine()!)! // Can take mutiple inputs from the user
 while t-- > 0 {
     var res = ""
-    var value = Int(readLine()!)!
-    var arrWord = value.asWord.characters.split(" ").map{String($0)}
+    var value = Int(readLine()!)! // Current number that is to be converted to words
+    var arrWord = value.asWord.characters.split(" ").map{String($0)} //dividing the number by each digit-wise word.
     var array = [String]()
     print(arrWord)
 
